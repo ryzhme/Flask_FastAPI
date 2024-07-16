@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }} :: {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+    {% for item in cloth %}
+        <div class="block">
+            <div class="photo_mockup"></div>
+            <div class="item_text">
+                    {% if item.id %}<a id="href_marg" class="href_st" href=/item/{{item.id}}>
+                    {% else %}<p class="href_st">
+                    {% endif %}
+                        {{ item.brand }}
+                    {% if item.id %}</a>
+                    {% else %}</p>
+                    {% endif %}
+
+                <p>{{ item.title }}</p>
+                <p>{{ item.prise }} $</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }} :: {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="row">Страница товара {{item_id}}</div>
+    <div class="row">
+        <div class="block">
+            <div class="photo_mockup"></div>
+            <div class="item_text">
+                <p class="href_st">{{ item.brand }}</p>
+                <p>{{ item.title }}</p>
+                <p>{{ item.prise }} $</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
