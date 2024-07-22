@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pict</title>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='pict.jpg') }}">
+    <br>
+    <a href="{{ url_for('upload_pict') }}">загрузить рисунок</a>
+</body>
+</html>
