@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Название</th>
+            <th>Год издания</th>
+            <th>Тираж</th>
+            <th>Автор</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for book in books %}
+                <tr>
+                    <td>{{ book.name }}</td>
+                    <td>{{ book.year }}</td>
+                    <td>{{ book.cnt }}</td>
+                    <td>{{ book.author.firstname }} {{ book.author.lastname }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
