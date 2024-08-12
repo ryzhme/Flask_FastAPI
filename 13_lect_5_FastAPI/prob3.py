@@ -20,10 +20,6 @@ async def read_root():
     logger.info('Отработал GET запрос.')
     return {"Hello": "World"}
 
-@app.get("/items/")
-async def read_item(skip: int = 0, limit: int = 10):
-    return {"skip": skip, "limit": limit}
-
 
 @app.post("/items/")
 async def create_item(item: Item):
